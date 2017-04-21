@@ -24,8 +24,8 @@ public class Robot extends SampleRobot
 	private static final int RIGHT_REAR_DRIVE = 0;
 	private static final int CLIMBER_PART1 = 6;
 	private static final int CLIMBER_PART2 = 7;
-	private static final int GEAR_BOX_PART1 = 3;
-	private static final int GEAR_BOX_PART2 = 4;
+	private static final int PISTON_PART1 = 3;
+	private static final int PISTON_PART2 = 4;
 	private static final int ENHANCED_LEFT_DRIVE = 4;
 	private static final int ENHANCED_RIGHT_DRIVE = 1;
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -36,7 +36,7 @@ public class Robot extends SampleRobot
 	Victor driveLeftFront, driveLeftRear, driveRightFront, driveRightRear, enhancedDriveLeft, enhancedDriveRight, climber1, climber2;
 	Joystick stick;
 	RobotDrive Skylar, OptimusPrime;
-	DoubleSolenoid gearBox;
+	DoubleSolenoid piston;
 	Ultrasonic vexSensorBackLeft, vexSensorBackRight, vexSensorFrontLeft, vexSensorFrontRight;
 	Boolean slowMode = false;
 	double leftDrive, rightDrive;
@@ -53,7 +53,7 @@ public class Robot extends SampleRobot
 		driveRightRear = new Victor(RIGHT_REAR_DRIVE);
 		enhancedDriveLeft = new Victor(ENHANCED_LEFT_DRIVE);
 		enhancedDriveRight = new Victor(ENHANCED_RIGHT_DRIVE);
-		gearBox = new DoubleSolenoid(GEAR_BOX_PART1, GEAR_BOX_PART2);
+		piston = new DoubleSolenoid(PISTON_PART1, PISTON_PART2);
 		climber1 = new Victor(CLIMBER_PART1);
 		climber2 = new Victor(CLIMBER_PART2);
 		vexSensorBackLeft = new Ultrasonic(0, 1);
